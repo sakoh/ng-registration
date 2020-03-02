@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormArray } from '@angular/forms';
 
@@ -10,5 +10,13 @@ import { RegistrationService } from 'src/app/services/registration.service';
     styleUrls: ["./basic-info.component.scss"]
 })
 export class BasicInfoComponent {
-    constructor(private registrationService: RegistrationService, private fb: FormBuilder) {}
+    basicInfo = this.fb.group({
+        firstName: [''],
+        lastName: [''],
+        email: [''],
+        birthDate: ['']
+    });
+
+    constructor(private registrationService: RegistrationService, private fb: FormBuilder) {
+    }
 }
