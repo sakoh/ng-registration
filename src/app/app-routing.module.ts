@@ -5,6 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BasicInfoComponent } from './pages/registration/basic-info/basic-info.component';
 import { AddressComponent } from './pages/registration/address/address.component';
 
+import { ReviewComponent } from "./pages/registration/review/review.component";
+
 const routes: Routes = [
   {
     path: "",
@@ -13,6 +15,10 @@ const routes: Routes = [
   {
     path: "address",
     component: AddressComponent
+  },
+  {
+    path: "review",
+    component: ReviewComponent
   }
 ];
 

@@ -1,1 +1,25 @@
-<h1>address</h1>
+<form [formGroup]="address" (ngSubmit)="submitAddress()">
+    <h2>Address</h2>
+  
+    <label>
+      Street:
+      <input type="text" formControlName="street">
+    </label>
+  
+    <label>
+      City:
+      <input type="text" formControlName="city">
+    </label>
+    
+    <label>
+      State:
+      <input type="text" formControlName="state">
+    </label>
+  
+    <label>
+      Zip Code:
+      <input type="text" formControlName="zipCode">
+    </label>
+
+    <button type='submit'>Next</button>
+  </form>

@@ -1,14 +1,13 @@
 export interface RegistrationData {
     basicInfo: BasicInfo,
-    billingAddress: Address,
-    shippingAddress: Address
+    address: Address
 }
 
 interface BasicInfo {
     firstName: string,
     lastName: string,
     email: string,
-    birthDate: Date
+    birthDate: string
 }
 
 interface Address {
